@@ -1,0 +1,44 @@
+{
+  "name": "nextjs",
+  "version": "4.0.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.1",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.11.1",
+    "aos": "^2.3.4",
+    "axios": "^0.21.1",
+    "clsx": "latest",
+    "cors": "^2.8.5",
+    "framer-motion": "^3.2.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^9.0.1",
+    "jss": "^10.5.0",
+    "next": "^11.1.0",
+    "next-page-transitions": "^1.0.0-beta.2",
+    "nprogress": "^0.2.0",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-dom": "latest",
+    "react-ga": "^3.3.0",
+    "react-jss": "^10.5.0",
+    "react-scroll": "^1.8.3",
+    "serve": "^11.3.2",
+    "swup": "^2.0.14"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "node scripts/sitemap.js"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^0.54.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.0"
+  }
+}
