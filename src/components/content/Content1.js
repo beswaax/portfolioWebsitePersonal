@@ -55,6 +55,7 @@ export default function Content() {
       "MATERIAL-UI",
       "HTML",
       "CSS",
+      "NODEJS",
     ],
     description3: "I will love to hear from you. Feel free to contact me.",
     image: "/assets/23.jpg",
