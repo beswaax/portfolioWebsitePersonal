@@ -46,7 +46,7 @@ export default function Content() {
     "header-p1": "A little about me...",
     "header-p2": "Skills",
     description:
-      "My name is Samuel Clintoc and I'm a passionate Frontend Web Developer using web technologies to build amazing products and focusing on solving probelms for different niches and different industries using the power of technology.",
+      "My name is Samuel Clintoc and I'm a passionate Frontend Web Developer using web technologies to build amazing products and focusing on solving problems for different niches and different industries using the power of technology.",
     description2: [
       "JAVASCRIPT",
       "REACT",

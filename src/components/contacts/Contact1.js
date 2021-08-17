@@ -114,7 +114,7 @@ export default function Contact() {
             <Typography
               align={matchesSM ? "center" : "left"}
               variant="body1"
-              color="textSecondary"
+              color="textPrimary"
               paragraph={true}
             >
               {content["description"]}
