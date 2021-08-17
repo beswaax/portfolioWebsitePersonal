@@ -9,7 +9,7 @@ const palette = {
     white: "#fff",
   },
   type: "light",
-  heavyBlue: "#111827",
+  heavyBlue: "#26262A",
   backgroundPage: "#F9FAFB",
   coolNav: "#EBF2F2",
   darkBlack: "#1A1A1A",

@@ -262,7 +262,7 @@ export default function Navigation() {
           </Link>
 
           <Link
-            href="https://smallpdf.com/result#r=c34dc4a1e2b39729d5b155a2e71a31e6&t=share-document"
+            href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
             target="_blank"
             color="textPrimary"
             variant="body1"
@@ -356,7 +356,7 @@ export default function Navigation() {
               button
               key={content["link2"]}
               component={Link}
-              href="https://smallpdf.com/result#r=c34dc4a1e2b39729d5b155a2e71a31e6&t=share-document"
+              href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
               target="_blank"
               onClick={() => setState({ open: !state.open })}
             >

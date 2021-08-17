@@ -9,7 +9,7 @@ import Link from "../../Link";
 import Image from "next/image";
 import { Grow, Hidden, useMediaQuery, useTheme } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     height: 512,
   },
@@ -29,6 +29,9 @@ const useStyles = makeStyles(() => ({
   image: {
     borderRadius: 500,
   },
+  gridContainerItem: {
+    backgroundColor: theme.palette.grey[200],
+  },
 }));
 
 export default function Content() {
@@ -40,22 +43,27 @@ export default function Content() {
 
   const content = {
     badge: "Pixel perfect websites/web apps | Affordable & Reliable",
-    "header-p1": "Passionate about front-end development",
-    "header-p2": "with RangoDev.",
-    "header-p3": "A kool front end guy",
-    "header-p4": "with reliance.",
-    description2:
-      "At RangoDev we focus on solving the real problems your business might be facing, be it increasing sales, increasing visibility or targeting the right clients. We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites/web applications.",
-
+    "header-p1": "A little about me...",
+    "header-p2": "Skills",
     description:
-      "At RangoDev we focus on solving the real problems your business might be facing, be it increasing sales, increasing visibility or targeting the right clients. We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites/web applications.",
+      "My name is Samuel Clintoc and I'm a passionate Frontend Web Developer using web technologies to build amazing products and focusing on solving probelms for different niches and different industries using the power of technology.",
+    description2: [
+      "JAVASCRIPT",
+      "REACT",
+      "GIT",
+      "NEXTJS",
+      "MATERIAL-UI",
+      "HTML",
+      "CSS",
+    ],
+    description3: "I will love to hear from you. Feel free to contact me.",
     image: "/assets/23.jpg",
   };
 
   return (
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" id="about">
       <Container maxWidth="lg">
-        <Box py={25}>
+        <Box py={matchesXS ? 8 : matchesSM ? 10 : 25}>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               <Box display="flex" height="100%">
@@ -69,15 +77,6 @@ export default function Content() {
                     >
                       {content["header-p1"]}{" "}
                     </Typography>
-                    <br />
-                    <Typography
-                      variant="h3"
-                      component="span"
-                      color="textPrimary"
-                      className={classes.text}
-                    >
-                      {content["header-p2"]}
-                    </Typography>
                   </Typography>
                   <Typography
                     variant="body1"
@@ -85,6 +84,13 @@ export default function Content() {
                     paragraph={true}
                   >
                     {content["description"]}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="textPrimary"
+                    paragraph={true}
+                  >
+                    {content["description3"]}
                   </Typography>
                 </Box>
               </Box>
@@ -99,25 +105,28 @@ export default function Content() {
                       color="textPrimary"
                       className={classes.text}
                     >
-                      {content["header-p3"]}{" "}
-                    </Typography>
-                    <br />
-                    <Typography
-                      variant="h3"
-                      component="span"
-                      color="textPrimary"
-                      className={classes.text}
-                    >
-                      {content["header-p4"]}
+                      {content["header-p2"]}{" "}
                     </Typography>
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textPrimary"
-                    paragraph={true}
-                  >
-                    {content["description2"]}
-                  </Typography>
+                  <Grid container spacing={1}>
+                    {content["description2"].map((desc, i) => (
+                      <Grid item sm={3} xs={5}>
+                        <Typography
+                          style={{
+                            fontWeight: 500,
+                            padding: 10,
+                            backgroundColor: theme.palette.grey[200],
+                          }}
+                          align="center"
+                          variant="body1"
+                          color="textPrimary"
+                          paragraph={true}
+                        >
+                          {desc}
+                        </Typography>
+                      </Grid>
+                    ))}
+                  </Grid>
                 </Box>
               </Box>
             </Grid>

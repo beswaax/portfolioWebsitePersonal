@@ -10,12 +10,12 @@ import Image from "next/image";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LanguageIcon from "@material-ui/icons/Language";
 
-import { Avatar, Button, ButtonBase } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    backgroundColor: theme.palette.grey[50],
-    // backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+    // backgroundColor: theme.palette.grey[50],
+    backgroundColor: theme.palette.heavyBlue,
   },
   post: {
     marginBottom: theme.spacing(4),
@@ -38,6 +38,17 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     borderRadius: 0,
+  },
+  title: {
+    color: theme.palette.common.white,
+  },
+  desc: {
+    color: theme.palette.grey[400],
+  },
+  link: {
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
 }));
 
@@ -93,17 +104,50 @@ export default function Blog() {
         "https://res.cloudinary.com/dpupj9evt/image/upload/v1629129236/Screenshot_from_2021-08-16_17-53-00_onra9z.png",
       category: "CRUD APP",
       title: "Bloglist App with Login",
-      url: "https://optimistic-bassi-0b22f7.netlify.app/",
+      url: "https://peaceful-jackson-fe2104.netlify.app/",
       githubUrl: "https://github.com/beswaax/blogsBackend",
       desc1:
         "A simple blog list app built with Node, Express, MongoDB and JWT.",
+    },
+    {
+      id: 5,
+      image:
+        "https://res.cloudinary.com/dpupj9evt/image/upload/v1629224892/Screenshot_from_2021-08-17_20-26-38_iptxqp.png",
+      category: "WEB DESIGN AGENCY WEBSITE",
+      title: "RangoDev Web Design Agency",
+      url: "https://rangojango.com/",
+      githubUrl: "https://github.com/beswaax/portfolioWebsiteNew",
+      desc1:
+        "Website for a company specializing in web design & web development.",
     },
   ];
 
   return (
     <section className={classes.section} id="projects">
       <Container maxWidth="lg">
-        <Box py={25}>
+        <Box py={15}>
+          <Container maxWidth="sm">
+            <Box pb={10}>
+              <Typography
+                align="center"
+                variant="h3"
+                style={{ fontWeight: 600 }}
+                className={classes.title}
+              >
+                Portfolio
+              </Typography>
+              <Typography
+                align="center"
+                variant="subtitle1"
+                style={{ fontWeight: 400 }}
+                className={classes.desc}
+              >
+                Here you can find a wide array of projects that I recently
+                created.
+              </Typography>
+            </Box>
+          </Container>
+
           <Grid container spacing={5} alignItems="center" justify="center">
             <Grid
               item
@@ -132,8 +176,17 @@ export default function Blog() {
                     {content[0]["category"]}
                   </Typography>
                 </Box>
-                <Link href={content[0].url} target="_blank" color="inherit">
-                  <Typography variant="h5" component="h2">
+                <Link
+                  href={content[0].url}
+                  target="_blank"
+                  className={classes.link}
+                  color="inherit"
+                >
+                  <Typography
+                    variant="h5"
+                    className={classes.title}
+                    component="h2"
+                  >
                     {content[0]["title"]}
                   </Typography>
                 </Link>
@@ -142,6 +195,7 @@ export default function Blog() {
                   variant="subtitle1"
                   paragraph={true}
                   color="textSecondary"
+                  className={classes.desc}
                 >
                   {content[0]["desc1"]}
                 </Typography>
@@ -214,8 +268,17 @@ export default function Blog() {
                     {content[1]["category"]}
                   </Typography>
                 </Box>
-                <Link href={content[1].url} target="_blank" color="inherit">
-                  <Typography variant="h5" component="h2">
+                <Link
+                  href={content[1].url}
+                  className={classes.link}
+                  target="_blank"
+                  color="inherit"
+                >
+                  <Typography
+                    variant="h5"
+                    className={classes.title}
+                    component="h2"
+                  >
                     {content[1]["title"]}
                   </Typography>
                 </Link>
@@ -223,6 +286,7 @@ export default function Blog() {
                 <Typography
                   variant="subtitle1"
                   paragraph={true}
+                  className={classes.desc}
                   color="textSecondary"
                 >
                   {content[1]["desc1"]}
@@ -253,7 +317,7 @@ export default function Blog() {
                             disableRipple
                             disableTouchRipple
                             target="_blank"
-                            href="https://farhaddental.vercel.app/"
+                            href="https://kaiperconstruction.vercel.app/"
                             color="primary"
                             variant="outlined"
                             className={classes.button}
@@ -296,8 +360,17 @@ export default function Blog() {
                     {content[2]["category"]}
                   </Typography>
                 </Box>
-                <Link href={content[2].url} target="_blank" color="inherit">
-                  <Typography variant="h5" component="h2">
+                <Link
+                  href={content[2].url}
+                  className={classes.link}
+                  target="_blank"
+                  color="inherit"
+                >
+                  <Typography
+                    variant="h5"
+                    className={classes.title}
+                    component="h2"
+                  >
                     {content[2]["title"]}
                   </Typography>
                 </Link>
@@ -305,6 +378,7 @@ export default function Blog() {
                 <Typography
                   variant="subtitle1"
                   paragraph={true}
+                  className={classes.desc}
                   color="textSecondary"
                 >
                   {content[2]["desc1"]}
@@ -335,7 +409,7 @@ export default function Blog() {
                             disableRipple
                             disableTouchRipple
                             target="_blank"
-                            href="https://kaiperconstruction.vercel.app/"
+                            href="https://farhaddental.vercel.app/"
                             color="primary"
                             variant="outlined"
                             className={classes.button}
@@ -378,8 +452,17 @@ export default function Blog() {
                     {content[3]["category"]}
                   </Typography>
                 </Box>
-                <Link href={content[3].url} target="_blank" color="inherit">
-                  <Typography variant="h5" component="h2">
+                <Link
+                  href={content[3].url}
+                  className={classes.link}
+                  target="_blank"
+                  color="inherit"
+                >
+                  <Typography
+                    variant="h5"
+                    className={classes.title}
+                    component="h2"
+                  >
                     {content[3]["title"]}
                   </Typography>
                 </Link>
@@ -387,6 +470,7 @@ export default function Blog() {
                 <Typography
                   variant="subtitle1"
                   paragraph={true}
+                  className={classes.desc}
                   color="textSecondary"
                 >
                   {content[3]["desc1"]}
@@ -460,8 +544,17 @@ export default function Blog() {
                     {content[4]["category"]}
                   </Typography>
                 </Box>
-                <Link href={content[4].url} target="_blank" color="inherit">
-                  <Typography variant="h5" component="h2">
+                <Link
+                  href={content[4].url}
+                  className={classes.link}
+                  target="_blank"
+                  color="inherit"
+                >
+                  <Typography
+                    variant="h5"
+                    className={classes.title}
+                    component="h2"
+                  >
                     {content[4]["title"]}
                   </Typography>
                 </Link>
@@ -469,6 +562,7 @@ export default function Blog() {
                 <Typography
                   variant="subtitle1"
                   paragraph={true}
+                  className={classes.desc}
                   color="textSecondary"
                 >
                   {content[4]["desc1"]}
@@ -499,7 +593,99 @@ export default function Blog() {
                             disableRipple
                             disableTouchRipple
                             target="_blank"
-                            href="https://optimistic-bassi-0b22f7.netlify.app/"
+                            href="https://peaceful-jackson-fe2104.netlify.app/"
+                            color="primary"
+                            variant="outlined"
+                            className={classes.button}
+                            endIcon={<LanguageIcon />}
+                          >
+                            LIVE
+                          </Button>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              md={4}
+              sm={6}
+              className={classes.post}
+              key={content[5].id}
+            >
+              <Box className={classes.img}>
+                <Image
+                  width={550}
+                  height={350}
+                  quality={100}
+                  src={content[5]["image"]}
+                  alt="portfolio piece image"
+                />
+              </Box>
+              <Box mt={2} mb={2}>
+                <Box mb={0}>
+                  <Typography
+                    variant="overline"
+                    component="span"
+                    color="primary"
+                  >
+                    {content[5]["category"]}
+                  </Typography>
+                </Box>
+                <Link
+                  href={content[5].url}
+                  className={classes.link}
+                  target="_blank"
+                  color="inherit"
+                >
+                  <Typography
+                    variant="h5"
+                    className={classes.title}
+                    component="h2"
+                  >
+                    {content[5]["title"]}
+                  </Typography>
+                </Link>
+
+                <Typography
+                  variant="subtitle1"
+                  paragraph={true}
+                  className={classes.desc}
+                  color="textSecondary"
+                >
+                  {content[5]["desc1"]}
+                </Typography>
+
+                <Box mt={3} display="flex" alignItems="center">
+                  <Box mr={2} textAlign="left">
+                    <Grid container spacing={1}>
+                      <Grid item>
+                        <Box pt={1}>
+                          <Button
+                            disableRipple
+                            disableTouchRipple
+                            color="primary"
+                            variant="contained"
+                            className={classes.button}
+                            endIcon={<GitHubIcon />}
+                            target="_blank"
+                            href="https://github.com/beswaax/portfolioWebsiteNew"
+                          >
+                            CODE
+                          </Button>
+                        </Box>{" "}
+                      </Grid>
+                      <Grid item>
+                        <Box pt={1}>
+                          <Button
+                            disableRipple
+                            disableTouchRipple
+                            target="_blank"
+                            href="https://rangojango.com/"
                             color="primary"
                             variant="outlined"
                             className={classes.button}

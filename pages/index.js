@@ -2,15 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import Head from "next/head";
 import Header1 from "../src/components/headers/Header1";
-
+import Content from "../src/components/content/Content1";
 import Contact from "../src/components/contacts/Contact1";
 import Contact2 from "../src/components/contacts/Contact2";
 import PortfolioItems from "../src/components/content/PortfolioItems";
 
 const useStyles = makeStyles((theme) => ({
-  bodyMargin: {
-    backgroundColor: theme.palette.backgroundPage,
-  },
+  bodyMargin: {},
 }));
 
 const LandingPage = () => {
@@ -47,7 +45,7 @@ const LandingPage = () => {
         <link rel="canonical" key="canonical" href="/" />
       </Head>
       <Header1 />
-
+      <Content />
       <PortfolioItems />
       <Contact />
       <Contact2 />

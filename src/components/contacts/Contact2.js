@@ -7,7 +7,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 
-import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import RoomIcon from "@material-ui/icons/Room";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -15,6 +14,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import { IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  section: {},
   contactWrapper: {
     backgroundColor: fade("#FFFFFF", 0.2),
   },
@@ -47,9 +47,9 @@ export default function Contact() {
   };
 
   return (
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" className={classes.section}>
       <Container maxWidth="lg">
-        <Box py={10}>
+        <Box pt={5} pb={10}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
               <div className={classes.contactWrapper}>

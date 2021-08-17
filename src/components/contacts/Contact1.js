@@ -15,7 +15,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    backgroundColor: theme.palette.grey[200],
+    // backgroundColor: theme.palette.grey[200],
   },
   textField: {
     ["& fieldset"]: {

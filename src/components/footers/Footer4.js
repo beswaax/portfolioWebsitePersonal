@@ -5,12 +5,11 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Link from "../../Link";
 import IconButton from "@material-ui/core/IconButton";
-import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: "#111827",
+    backgroundColor: theme.palette.heavyBlue,
   },
   rootBox: {
     [theme.breakpoints.down("md")]: {
@@ -42,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   footerCopy: {
     borderTopWidth: 1,
     borderTopStyle: "solid",
-    borderTopColor: "#212c3a",
+    borderTopColor: theme.palette.grey[500],
   },
   copy: {
     [theme.breakpoints.down("md")]: {
@@ -65,9 +64,9 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     borderRadius: 7,
     padding: 8,
-    backgroundColor: "#1F2937",
+    backgroundColor: "#383838",
     "&:hover": {
-      backgroundColor: "#374151",
+      backgroundColor: "#202023",
     },
   },
 }));
@@ -130,7 +129,7 @@ export default function Footer() {
               {content["link3"]}
             </Link>
             <Link
-              href="https://smallpdf.com/result#r=c34dc4a1e2b39729d5b155a2e71a31e6&t=share-document"
+              href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
               target="_blank"
               variant="body1"
               className={classes.footerLink}
