@@ -19,6 +19,7 @@
     "nprogress": "^0.2.0",
     "prop-types": "latest",
     "react": "latest",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "latest",
     "react-ga": "^3.3.0",

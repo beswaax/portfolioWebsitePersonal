@@ -142,8 +142,8 @@ export default function Blog() {
                 style={{ fontWeight: 400 }}
                 className={classes.desc}
               >
-                Here you can find a wide array of projects that I recently
-                created.
+                Here you can find a variety of projects that I have recently
+                created.{" "}
               </Typography>
             </Box>
           </Container>

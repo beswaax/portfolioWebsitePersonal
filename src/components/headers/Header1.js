@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import Link from "../../Link";
 
@@ -39,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.primary.dark,
     },
     marginRight: theme.spacing(2),
-    paddingTop: 9,
-    paddingBottom: 9,
+    paddingTop: 10.5,
+    paddingBottom: 10.5,
     paddingRight: 19,
     paddingLeft: 19,
     borderRadius: 0,
@@ -87,6 +88,12 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 700,
   },
+  anchorLink: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
 }));
 
 export default function Header() {
@@ -98,11 +105,11 @@ export default function Header() {
     description:
       "I'm a self-taught developer currently located in Germany and I am pursuing the opportunity to begin my career in the web development industry.",
     "primary-action": "MY RESUME",
-    "secondary-action": "CONTACT",
+    "secondary-action": "PROJECTS",
   };
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="home">
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white" py={5}>
           <Typography variant="h2" component="h1" gutterBottom={true}>
@@ -139,18 +146,19 @@ export default function Header() {
             >
               {content["primary-action"]}
             </Button>
-            <Button
-              variant="contained"
-              component={Link}
-              fullWidth={false}
-              disableRipple
-              disableFocusRipple
-              disableTouchRipple
-              href="/#contact"
-              className={classes.primaryButton}
-            >
-              {content["secondary-action"]}
-            </Button>
+
+            <AnchorLink href="#projects" className={classes.anchorLink}>
+              <Button
+                variant="contained"
+                fullWidth={false}
+                disableRipple
+                disableFocusRipple
+                disableTouchRipple
+                className={classes.primaryButton}
+              >
+                {content["secondary-action"]}
+              </Button>
+            </AnchorLink>
           </Box>
         </Box>
       </Container>

@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "../../Link";
 import IconButton from "@material-ui/core/IconButton";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -69,6 +70,12 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#202023",
     },
   },
+  anchorLink: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
 }));
 
 export default function Footer() {
@@ -80,6 +87,7 @@ export default function Footer() {
       width: 200,
     },
     copy: "© 2021 Samuel Clintoc's Portfolio.",
+    link0: "Home",
     link1: "About",
     link2: "Projects",
     link3: "Contact",
@@ -107,27 +115,55 @@ export default function Footer() {
           alignItems="center"
           className={classes.rootBox}
         >
-          <Link href="/" color="inherit" underline="none">
+          <AnchorLink
+            href="#home"
+            className={classes.anchorLink}
+            color="inherit"
+            underline="none"
+          >
             {brand}
-          </Link>
+          </AnchorLink>
           <Box component="nav" ml="auto" className={classes.footerNav}>
-            <Link href="/#about" variant="body1" className={classes.footerLink}>
-              {content["link1"]}
-            </Link>
-            <Link
-              href="/#projects"
-              variant="body1"
-              className={classes.footerLink}
-            >
-              {content["link2"]}
-            </Link>
-            <Link
-              href="/#contact"
-              variant="body1"
-              className={classes.footerLink}
-            >
-              {content["link3"]}
-            </Link>
+            <AnchorLink className={classes.anchorLink} href="#home">
+              <Typography
+                color="textPrimary"
+                variant="body1"
+                className={classes.footerLink}
+              >
+                {content["link0"]}
+              </Typography>
+            </AnchorLink>
+
+            <AnchorLink className={classes.anchorLink} href="#about">
+              <Typography
+                color="textPrimary"
+                variant="body1"
+                className={classes.footerLink}
+              >
+                {content["link1"]}
+              </Typography>
+            </AnchorLink>
+
+            <AnchorLink className={classes.anchorLink} href="#projects">
+              <Typography
+                color="textPrimary"
+                variant="body1"
+                className={classes.footerLink}
+              >
+                {content["link2"]}
+              </Typography>
+            </AnchorLink>
+
+            <AnchorLink className={classes.anchorLink} href="#contact">
+              <Typography
+                color="textPrimary"
+                variant="body1"
+                className={classes.footerLink}
+              >
+                {content["link3"]}
+              </Typography>
+            </AnchorLink>
+
             <Link
               href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
               target="_blank"

@@ -7,6 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Link from "../../Link";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
@@ -14,18 +15,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
 import { useRouter } from "next/router";
-import {
-  ButtonBase,
-  Menu,
-  Collapse,
-  Typography,
-  MenuItem,
-  useTheme,
-  Container,
-} from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
-
-import { ExpandLess, ExpandMore } from "@material-ui/icons";
+import { Typography, useTheme, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -39,8 +29,13 @@ const useStyles = makeStyles((theme) => ({
   brand: {
     lineHeight: 1,
     marginRight: "auto",
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
   link: {
+    textDecoration: "none",
     marginRight: theme.spacing(5),
     color: theme.palette.grey[100],
     transition: "color 0.25s ease-in-out",
@@ -163,6 +158,19 @@ const useStyles = makeStyles((theme) => ({
   collapseContainer: {
     backgroundImage: [theme.palette.grey[200]],
   },
+  anchorLink: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
+  anchorLink2: {
+    color: theme.palette.text.primary,
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
 }));
 
 export default function Navigation() {
@@ -189,6 +197,7 @@ export default function Navigation() {
       width: 210,
     },
     drawerBrand: "/assets/logo2/vector/logo-single.svg",
+    link0: "Home",
     link1: "About",
     link2: "Projects",
     link3: "Contact",
@@ -224,42 +233,48 @@ export default function Navigation() {
     <AppBar position="fixed" color="inherit" className={classes.appBar}>
       <Container maxWidth="lg">
         <Toolbar className={classes.toolbar}>
-          <Link
-            href="/"
-            color="primary"
-            underline="none"
-            variant="h5"
-            className={classes.brand}
-          >
+          <AnchorLink className={classes.brand} href="#home">
             {brand}
-          </Link>
+          </AnchorLink>
 
-          <Link
-            href="/#about"
-            color="textPrimary"
-            variant="body1"
-            className={classes.link}
-          >
-            {content["link1"]}
-          </Link>
+          <AnchorLink className={classes.anchorLink} href="#home">
+            <Typography
+              color="textPrimary"
+              variant="body1"
+              className={classes.link}
+            >
+              {content["link0"]}
+            </Typography>
+          </AnchorLink>
 
-          <Link
-            href="/#projects"
-            color="textPrimary"
-            variant="body1"
-            className={classes.link}
-          >
-            {content["link2"]}
-          </Link>
+          <AnchorLink className={classes.anchorLink} href="#about">
+            <Typography
+              color="textPrimary"
+              variant="body1"
+              className={classes.link}
+            >
+              {content["link1"]}
+            </Typography>
+          </AnchorLink>
 
-          <Link
-            href="/#contact"
-            color="textPrimary"
-            variant="body1"
-            className={classes.link}
-          >
-            {content["link3"]}
-          </Link>
+          <AnchorLink className={classes.anchorLink} href="#projects">
+            <Typography
+              color="textPrimary"
+              variant="body1"
+              className={classes.link}
+            >
+              {content["link2"]}
+            </Typography>
+          </AnchorLink>
+          <AnchorLink className={classes.anchorLink} href="#contact">
+            <Typography
+              color="textPrimary"
+              variant="body1"
+              className={classes.link}
+            >
+              {content["link3"]}
+            </Typography>
+          </AnchorLink>
 
           <Link
             href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
@@ -297,7 +312,7 @@ export default function Navigation() {
             borderRight={0}
           >
             <Link
-              href="/"
+              href="/#home"
               color="primary"
               underline="none"
               variant="h5"
@@ -311,43 +326,57 @@ export default function Navigation() {
             </Link>
           </Box>
           <List>
-            <ListItem
-              className={classes.listItem}
-              disableRipple
-              disableTouchRipple
-              button
-              key={content["link1"]}
-              component={Link}
-              href="/"
-              onClick={() => setState({ open: !state.open })}
-            >
-              <ListItemText primary={content["link1"]} />
-            </ListItem>
-            <ListItem
-              className={classes.listItem}
-              disableRipple
-              disableTouchRipple
-              button
-              key={content["link2"]}
-              component={Link}
-              href="/about"
-              onClick={() => setState({ open: !state.open })}
-            >
-              <ListItemText primary={content["link2"]} />
-            </ListItem>
+            <AnchorLink className={classes.anchorLink2} href="#home">
+              <ListItem
+                className={classes.listItem}
+                disableRipple
+                disableTouchRipple
+                button
+                key={content["link0"]}
+                onClick={() => setState({ open: !state.open })}
+              >
+                <ListItemText primary={content["link0"]} />
+              </ListItem>
+            </AnchorLink>
 
-            <ListItem
-              className={classes.listItem}
-              disableRipple
-              disableTouchRipple
-              button
-              key={content["link2"]}
-              component={Link}
-              href="/about"
-              onClick={() => setState({ open: !state.open })}
-            >
-              <ListItemText primary={content["link3"]} />
-            </ListItem>
+            <AnchorLink className={classes.anchorLink2} href="#about">
+              <ListItem
+                className={classes.listItem}
+                disableRipple
+                disableTouchRipple
+                button
+                key={content["link1"]}
+                onClick={() => setState({ open: !state.open })}
+              >
+                <ListItemText primary={content["link1"]} />
+              </ListItem>
+            </AnchorLink>
+
+            <AnchorLink className={classes.anchorLink2} href="#projects">
+              <ListItem
+                className={classes.listItem}
+                disableRipple
+                disableTouchRipple
+                button
+                key={content["link2"]}
+                onClick={() => setState({ open: !state.open })}
+              >
+                <ListItemText primary={content["link2"]} />
+              </ListItem>
+            </AnchorLink>
+
+            <AnchorLink className={classes.anchorLink2} href="#contact">
+              <ListItem
+                className={classes.listItem}
+                disableRipple
+                disableTouchRipple
+                button
+                key={content["link3"]}
+                onClick={() => setState({ open: !state.open })}
+              >
+                <ListItemText primary={content["link3"]} />
+              </ListItem>
+            </AnchorLink>
 
             <ListItem
               className={classes.listItem}
