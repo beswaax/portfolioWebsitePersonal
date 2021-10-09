@@ -277,7 +277,7 @@ export default function Navigation() {
           </AnchorLink>
 
           <Link
-            href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
+            href="https://drive.google.com/file/d/1BPnJo-iBJZtPnSpXo5hgKMr4i1s-SWTB/view?usp=sharing"
             target="_blank"
             color="textPrimary"
             variant="body1"
@@ -385,7 +385,7 @@ export default function Navigation() {
               button
               key={content["link2"]}
               component={Link}
-              href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
+              href="https://drive.google.com/file/d/1BPnJo-iBJZtPnSpXo5hgKMr4i1s-SWTB/view?usp=sharing"
               target="_blank"
               onClick={() => setState({ open: !state.open })}
             >

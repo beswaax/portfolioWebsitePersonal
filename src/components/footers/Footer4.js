@@ -165,7 +165,7 @@ export default function Footer() {
             </AnchorLink>
 
             <Link
-              href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
+              href="https://drive.google.com/file/d/1BPnJo-iBJZtPnSpXo5hgKMr4i1s-SWTB/view?usp=sharing"
               target="_blank"
               variant="body1"
               className={classes.footerLink}
