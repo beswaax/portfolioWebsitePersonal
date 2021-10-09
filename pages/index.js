@@ -17,7 +17,7 @@ const LandingPage = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">Samuel Clintoc Front-end Developer Portfolio</title>
+        <title key="title">Samuel Clintoc Full-Stack Developer Portfolio</title>
         <meta
           name="description"
           key="description"

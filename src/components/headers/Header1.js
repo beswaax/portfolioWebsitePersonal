@@ -118,7 +118,7 @@ export default function Header() {
             </Typography>
             <br />
             <Typography variant="h2" component="span" className={classes.title}>
-              I am a <span className={classes.extra}>Front-end Engineer</span>
+              I am a <span className={classes.extra}>Full-Stack Developer</span>
             </Typography>
           </Typography>
           <Container maxWidth="sm">
@@ -140,7 +140,7 @@ export default function Header() {
               disableRipple
               disableFocusRipple
               disableTouchRipple
-              href="https://drive.google.com/file/d/1z4v4HvMePdrs-QSGXAXHZ2BWBg22jNAK/view?usp=sharing"
+              href="https://drive.google.com/file/d/1BPnJo-iBJZtPnSpXo5hgKMr4i1s-SWTB/view?usp=sharing"
               target="_blank"
               className={classes.secondaryButton}
             >

@@ -4,10 +4,8 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Link from "../../Link";
-import Image from "next/image";
-import { Grow, Hidden, useMediaQuery, useTheme } from "@material-ui/core";
+
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -46,16 +44,16 @@ export default function Content() {
     "header-p1": "A little about me...",
     "header-p2": "Skills",
     description:
-      "My name is Samuel Clintoc and I'm a passionate Frontend Web Developer using web technologies to build amazing products and focusing on solving problems for different niches and different industries using the power of technology.",
+      "My name is Samuel Clintoc and I'm a passionate Full-Stack Developer using web technologies to build amazing products. I am focusing on solving problems for different niches and different industries using the power of technology.",
     description2: [
       "JAVASCRIPT",
       "REACT",
-      "GIT",
-      "NEXTJS",
-      "MATERIAL-UI",
-      "HTML",
-      "CSS",
       "NODEJS",
+      "NEXTJS",
+      "EXPRESS",
+      "MATERIAL-UI",
+      "HTML/CSS",
+      "MONGODB",
     ],
     description3: "I will love to hear from you. Feel free to contact me.",
     image: "/assets/23.jpg",
